@@ -17,22 +17,29 @@ docker --version
 Imagine Docker
 --------------
 Imaginea este publicată pe Docker Hub:
-luraaa18/joc_de_ghicit_numarul
+
+**luraaa18/joc_de_ghicit_numarul**
 
 Descărcarea imaginii
 --------------------
 Pentru a descărca imaginea de pe Docker Hub:
+``
 docker pull luraaa18/joc_de_ghicit_numarul
+``
 
 Verificare:
+``
 docker images | grep joc_de_ghicit_numarul
+``
 
 Rularea jocului (interactiv)
 ----------------------------
 Jocul este interactiv și trebuie rulat cu TTY.
 
 Rulare simplă:
+``
 docker run -it --rm luraaa18/joc_de_ghicit_numarul
+``
 
 Această comandă:
 - pornește jocul în mod interactiv
@@ -47,12 +54,16 @@ Jocul salvează datele în container în directorul /data:
 Pentru a păstra aceste fișiere pe sistemul local, se mapează un director local.
 
 Crearea directorului local:
+``
 mkdir -p data
+``
 
 Rulare cu mapare volum:
+``
 docker run -it --rm \
   -v "$(pwd)/data:/data" \
   luraaa18/joc_de_ghicit_numarul
+  ``
 
 După rulare, fișierele vor fi disponibile local:
 data/highscores.json
@@ -63,24 +74,32 @@ Rulare cu argumente
 Argumentele sunt transmise direct scriptului jocului.
 
 Nivel de dificultate și număr de încercări:
+``
 docker run -it --rm \
   -v "$(pwd)/data:/data" \
   luraaa18/joc_de_ghicit_numarul --level hard --max_tries 10
+  ``
 
 Mod multiplayer:
+``
 docker run -it --rm \
   -v "$(pwd)/data:/data" \
   luraaa18/joc_de_ghicit_numarul --multiplayer --players 2
+  ``
 
 Afișare clasament:
+``
 docker run -it --rm \
   -v "$(pwd)/data:/data" \
   luraaa18/joc_de_ghicit_numarul --highscores
+  ``
 
 Afișare statistici jucător:
+``
 docker run -it --rm \
   -v "$(pwd)/data:/data" \
-  luraaa18/joc_de_ghicit_numarul --stats --player "Ion"
+  luraaa18/joc_de_ghicit_numarul --stats --player "Laura"
+  ``
 
 Note
 ----
