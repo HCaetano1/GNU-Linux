@@ -60,10 +60,8 @@ mkdir -p data
 
 Rulare cu mapare volum:
 ``
-docker run -it --rm \
-  -v "$(pwd)/data:/data" \
-  luraaa18/joc_de_ghicit_numarul
-  ``
+docker run -it --rm -v "$(pwd)/data:/data" luraaa18/joc_de_ghicit_numarul
+``
 
 După rulare, fișierele vor fi disponibile local:
 data/highscores.json
@@ -75,31 +73,23 @@ Argumentele sunt transmise direct scriptului jocului.
 
 Nivel de dificultate și număr de încercări:
 ``
-docker run -it --rm \
-  -v "$(pwd)/data:/data" \
-  luraaa18/joc_de_ghicit_numarul --level hard --max_tries 10
-  ``
+docker run -it --rm -v "$(pwd)/data:/data" luraaa18/joc_de_ghicit_numarul --level hard --max_tries 10
+``
 
 Mod multiplayer:
 ``
-docker run -it --rm \
-  -v "$(pwd)/data:/data" \
-  luraaa18/joc_de_ghicit_numarul --multiplayer --players 2
-  ``
+docker run -it --rm -v "$(pwd)/data:/data" luraaa18/joc_de_ghicit_numarul --multiplayer --players 2
+``
 
 Afișare clasament:
 ``
-docker run -it --rm \
-  -v "$(pwd)/data:/data" \
-  luraaa18/joc_de_ghicit_numarul --highscores
-  ``
+docker run -it --rm -v "$(pwd)/data:/data" luraaa18/joc_de_ghicit_numarul --highscores
+``
 
 Afișare statistici jucător:
 ``
-docker run -it --rm \
-  -v "$(pwd)/data:/data" \
-  luraaa18/joc_de_ghicit_numarul --stats --player "Laura"
-  ``
+docker run -it --rm -v "$(pwd)/data:/data" luraaa18/joc_de_ghicit_numarul --stats --player "Laura"
+``
 
 Note
 ----
