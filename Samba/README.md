@@ -41,7 +41,7 @@ Jocul este interactiv și trebuie rulat cu TTY.
 Rulare simplă:
 
 ``
-docker run -it --rm luraaa18/joc_de_ghicit_numarul
+docker run -it --rm luraaa18/joc_de_ghicit_numarul --player "Laura"
 ``
 
 Această comandă:
@@ -65,7 +65,7 @@ mkdir -p data
 Rulare cu mapare volum:
 
 ``
-docker run -it --rm -v "$(pwd)/data:/data" luraaa18/joc_de_ghicit_numarul
+docker run -it --rm -v "$(pwd)/data:/data" luraaa18/joc_de_ghicit_numarul --player "Laura"
 ``
 
 După rulare, fișierele vor fi disponibile local:
