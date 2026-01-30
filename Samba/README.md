@@ -9,7 +9,10 @@ Cerințe
 - Docker Engine (docker.io)
 
 Verificați dacă Docker este instalat:
+
+``
 docker --version
+``
 
 Imagine Docker
 --------------
