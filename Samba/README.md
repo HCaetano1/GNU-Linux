@@ -34,7 +34,7 @@ Verificare:
 docker images | grep joc_de_ghicit_numarul
 ``
 
-Rularea jocului (interactiv)
+Rularea jocului
 ----------------------------
 Jocul este interactiv și trebuie rulat cu TTY.
 
@@ -100,7 +100,7 @@ Afișare statistici jucător:
 docker run -it --rm -v "$(pwd)/data:/data" luraaa18/joc_de_ghicit_numarul --stats --player "Laura"
 ``
 
-Note
+Observații
 ----
 - Aplicația rulează pe Alpine Linux
 - Toate dependențele (bash, jq, coreutils) sunt incluse în imagine
@@ -108,4 +108,4 @@ Note
 
 Licență
 -------
-Proiect educațional – temă de semestru.
+Proiect educațional – temă.
